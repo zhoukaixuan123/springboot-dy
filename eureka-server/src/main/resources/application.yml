@@ -1,0 +1,11 @@
+server:
+  port: 10086
+spring:
+   application:
+      name: eurkea-server
+eureka:
+  client:
+    register-with-eureka: false #是否将自己注册到Eureka Server上，默认为true
+    fetch-registry: false  #是否从Eureka Server上获取注册信息，默认为true
+    service-url:
+       defaultZone:  http://127.0.0.1:10086/eureka
