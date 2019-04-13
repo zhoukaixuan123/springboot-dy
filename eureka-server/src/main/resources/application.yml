@@ -5,7 +5,15 @@ spring:
       name: eurkea-server
 eureka:
   client:
-    register-with-eureka: false #是否将自己注册到Eureka Server上，默认为true
-    fetch-registry: false  #是否从Eureka Server上获取注册信息，默认为true
-    service-url:
+     service-url:
        defaultZone:  http://127.0.0.1:10086/eureka
+  #instance:
+   #每30秒发生一次心跳
+   # lease-renewal-interval-in-seconds: 30
+    #如果90秒内 没又心跳则剔除
+    #lease-expiration-duration-in-seconds: 90
+  #不让启动  去找地址
+  #instance:
+   # prefer-ip-address: true
+    #ip-address: 127.0.0.1
+

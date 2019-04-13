@@ -16,6 +16,28 @@
              <groupId>org.springframework.boot</groupId>
              <artifactId>spring-boot-starter-web</artifactId>
          </dependency>
+
+         <!--服务注册  Eureka-->
+         <dependency>
+             <groupId>org.springframework.cloud</groupId>
+             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+         </dependency>
+         <!--雪崩 问题处理 Hystix-->
+         <dependency>
+             <groupId>org.springframework.cloud</groupId>
+             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+         </dependency>
+
+         <!--负载均衡实现类-->
+         <!--<dependency>
+             <groupId>org.springframework.cloud</groupId>
+             <artifactId>spring-cloud-starter-netflix-eureka-ribbon</artifactId>
+         </dependency>-->
+         <!--网关依赖-->
+         <dependency>
+             <groupId>org.springframework.cloud</groupId>
+             <artifactId>spring-cloud-starter-openfeign</artifactId>
+         </dependency>
      </dependencies>
 
 </project>

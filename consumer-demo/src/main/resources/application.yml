@@ -1,0 +1,29 @@
+server:
+  port: 8080
+spring:
+   application:
+      name: consumer-server
+eureka:
+  client:
+     service-url:
+       defaultZone:  http://127.0.0.1:10086/eureka,http://127.0.0.1:10087/eureka
+feign:
+   hystrix:
+      enabled: true
+ribbon:
+  connectionTimeOut: 50
+  ReadTimeOut: 2000
+hystrix:
+  command:
+      default:
+        execution:
+          isolation:
+            thread:
+             timeoutInMilliseconds: 3000
+     #regi#ster-with-eureka: false
+    #负载规则  设定
+    #user-server：
+     # ribbon：
+      #NFLoadBalancerRuleClassName：com.netflix.loadbalancer.RandomRule
+
+

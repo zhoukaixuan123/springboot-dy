@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
  * @author zhoukx
  * @date 2019/4/10$
  * @description $
+ *   euerka  注册中心
+ *   ribbon  负载均衡
+ *   hysyix  线程隔离  服务降级
  */
 @RestController
 @RequestMapping("/hello")
@@ -23,6 +26,7 @@ public class UserController {
 
     @GetMapping("/{id}")
      public User getString(@PathVariable("id") String id ){
-         return  userService.getUser(id);
+
+        return  userService.getUser(id);
      }
 }

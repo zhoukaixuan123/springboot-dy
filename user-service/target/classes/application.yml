@@ -1,11 +1,10 @@
 
 server:
   port: 8081
-  tomcat:   #tomcat 线程数，编码格式  设置
-       uri-encoding: UTF-8
-       max-threads: 1000
-       max-connections: 20000
+
 spring:
+  application:
+      name: user-server
   datasource:
     username: root
     password: 123456
@@ -14,3 +13,7 @@ spring:
 
 mybatis:
      type-aliases-package: cn.itcast.user.pojo
+eureka:
+  client:
+     service-url:
+       defaultZone:  http://127.0.0.1:10086/eureka,http://127.0.0.1:10087/eureka
